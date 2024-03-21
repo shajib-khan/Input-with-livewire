@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Post;
+use App\Livewire\CreatePost;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+Route::get('/', CreatePost::class)->name('create.post');
