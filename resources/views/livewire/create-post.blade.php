@@ -13,5 +13,7 @@
 
     @foreach ($posts as $post)
     <p>{{ $post->name }}</p>
+    <a href=""button class="btn btn-danger">delete</button>
+
 @endforeach
 </div>
