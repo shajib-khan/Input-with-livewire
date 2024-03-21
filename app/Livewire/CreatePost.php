@@ -2,19 +2,21 @@
 
 namespace App\Livewire;
 
-use App\Models\Post;
+use App\Models\Post as PostModel;
 use Livewire\Component;
 
 class CreatePost extends Component
 {
+
     public $name;
+    public $post;
 
     public function AddData()
     {
         $this->validate(
             ["name"=> "required"]
         );
-        Post::create([
+        PostModel::create([
             'name'=> $this->name,
         ]);
 
@@ -22,8 +24,12 @@ class CreatePost extends Component
 
 
     }
+
     public function render()
     {
-        return view('livewire.create-post');
+
+        return view('livewire.create-post', [
+            'posts'=>PostModel::all(),
+        ]);
     }
 }
