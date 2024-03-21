@@ -10,4 +10,8 @@
 
         <button class="btn btn-primary">Submit</button>
       </form>
+
+    @foreach ($posts as $post)
+    <p>{{ $post->name }}</p>
+@endforeach
 </div>
