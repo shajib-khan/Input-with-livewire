@@ -21,8 +21,9 @@
             @foreach ($posts as $post)
             <tr></tr>
         <td>{{ $post->name }}</td>
-        <td> <button type="button" class="btn btn-danger">Delete</button></td>
-        <td> <button type="button" class="btn btn-primary">Edit</button></td>
+        <td> <a class="btn btn-danger" wire:click="DeleteName({{ $post['id'] }})">Delete</a></td>
+        <td> <a class="btn btn-danger" wire:navigate="EditName" href="{{ route('edit.post', [post->'id']) }}">Edit</a></td>
+
         </tr>
         @endforeach
 

@@ -2,6 +2,7 @@
 
 use App\Models\Post;
 use App\Livewire\CreatePost;
+use App\Livewire\EditPost;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,3 +19,4 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', CreatePost::class)->name('create.post');
+Route::get('edit-post/{id}', EditPost::class)->name('edit.post');

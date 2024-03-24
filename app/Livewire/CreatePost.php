@@ -21,13 +21,15 @@ class CreatePost extends Component
         ]);
 
         return redirect()->back()->with('message',"This is Success Message");
-
-
     }
-
+    public function DeleteName($id)
+    {
+        PostModel::find($id)->delete();
+        return redirect()->back()->with('message',"Successfully Name Deleted");
+    }
+   
     public function render()
     {
-
         return view('livewire.create-post',
          [
             'posts'=>PostModel::all(),
