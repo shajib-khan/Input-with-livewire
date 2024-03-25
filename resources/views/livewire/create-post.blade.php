@@ -22,7 +22,7 @@
             <tr></tr>
         <td>{{ $post->name }}</td>
         <td> <a class="btn btn-danger" wire:click="DeleteName({{ $post['id'] }})">Delete</a></td>
-        <td> <a class="btn btn-danger" wire:navigate="EditName" href="{{ route('edit.post', [post->'id']) }}">Edit</a></td>
+        <td> <a class="btn btn-danger" wire:navigate="EditName" href="{{ route('edit.post', $post['id']) }}">Edit</a></td>
 
         </tr>
         @endforeach
